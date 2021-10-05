@@ -19,9 +19,13 @@ from django.urls import path
 
 from pystagram.routes.hello import hello_world, hi
 
+from posts.views import list
+
 
 urlpatterns = [
     # path('admin/', admin.site.urls),
     path('hello', hello_world),
-    path('hi', hi)
+    path('hi', hi),
+
+    path('posts', list),
 ]
