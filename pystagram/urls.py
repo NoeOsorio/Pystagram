@@ -19,7 +19,7 @@ from django.urls import path
 
 from pystagram.routes.hello import hello_world, hi
 
-from posts.views import list
+from posts.views import list, update
 
 
 urlpatterns = [
@@ -28,4 +28,5 @@ urlpatterns = [
     path('hi', hi),
 
     path('posts', list),
+    path('posts/<int:id>/', update),
 ]
